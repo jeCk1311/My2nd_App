@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html>
-    <body bgcolor="gray">
-       <center >
-       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-       		<H1><font size="109" face="Baskerville Old Face" ><I><a href="page1.html">
-      			Quicky Notes</a></I></font></H1>
-       </center>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+       
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>JQuery Mobile ex01</title>
+        
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+
+    .save-button{
+        background: #5cb85c;
+        text-shadow: 0 0 0; 
+        color: #ffffff;
+    }
+input[type=text] {
+   
+    background-color: #eeff38;
+    color: black;
+}
+
+    </style>
+<title>Hello World</title>
+<style type="text/css">
+body {
+    background: url(gray.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+.ui-page {
+    background: transparent;
+}
+.ui-content{
+    background: transparent;
+}
+</style>
+    <title>Hello World</title>
+    </head>
+
+
+    <body>
+         <div data-role="page" id="HomePage">
+            
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <align="left"><h3><I>Quicky notes</I></h3></align>
+            </div>
+
+             <div data-role="main" class="ui-content">   
+             
+                <ul id="note_List" data-role="listview" data-inset="false">
+                  </ul>
+                
+            </div>
+
+            
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                
+                <div data-role="navbar" data-iconpos="top" >
+                   <ul>
+						<li>
+                            <a href="#NotePage" class="ui-btn" >+ Add New Note</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div data-role="page" id="NotePage" data-theme="b">
+			<div data-role="header">
+            <align="left"><h3><I>Quicky notes</I></h3></align>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form id="form-Add">
+                    <label for="noteDescription">Description:</label>
+                    <input type="text" id="noteDescription"  placeholder="type here...." value=""> 
+
+                    <label for="note">Start recording your note here:</label>
+                    <textarea type="text" style="background-color:#eeff38;" placeholder="type here...." id="addNote"></textarea>
+
+                    <button id="submitNote" class="ui-btn">Save</button>
+
+                </form>
+            </div>
+
+         
+            
+        </div>  
+
+        
+        <div data-role="page" id="EditNotePage" data-theme="b">
+			<div data-role="header">
+                <align="left"<h3><I>Quicky notes<I/></h3></align>
+            </div>
+			<div data-role="main" class="ui-content">
+                <form id="form-Edit">
+                    <label for="noteDescriptionEdit">Description:</label>
+                    <input type="text" id="noteDescriptionEdit" value=""> 
+
+                    <label for="noteEdit">Start recording your note here:</label>
+                    <textarea type="text" style="background-color:#eeff38;"  id="noteEdit"></textarea>
+
+
+                    <button id="submitEditNote" class="ui-btn ui-btn-inline">Save</button>
+                    <button id="deleteNote" class="ui-btn ui-btn-inline">Delete</button>
+                </form>
+            </div>
+
+         
+            
+        </div> 
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
